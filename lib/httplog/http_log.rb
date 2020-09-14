@@ -105,7 +105,7 @@ module HttpLog
         log('Response:')
         log_data_lines(data)
       else
-        log("Response:\n#{data}")
+        log("Response:\n#{ap(data)}")
       end
     rescue BodyParsingError => e
       log("Response: #{e.message}")
@@ -157,7 +157,7 @@ module HttpLog
         log('Data:')
         log_data_lines(data)
       else
-        log("Data: #{data}")
+        log("Data: #{ap(data)}")
       end
     end
 
